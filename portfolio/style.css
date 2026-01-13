@@ -1449,3 +1449,83 @@ a:hover {
   color: #4f46e5;
 }
 /* ------------------------------------------------------------------> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ats-score {
+  padding: 5rem 1.5rem;
+}
+
+.ats-container {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.ats-desc {
+  color: var(--text-soft);
+  margin-bottom: 2rem;
+}
+
+.ats-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 2.5rem;
+  border-radius: 18px;
+  backdrop-filter: blur(14px);
+}
+
+.ats-card input {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.ats-result {
+  margin-top: 2rem;
+  display: none;
+}
+
+.progress-bar {
+  background: rgba(255,255,255,0.08);
+  height: 14px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+  transition: width 1s ease;
+}
+
+#atsScore {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

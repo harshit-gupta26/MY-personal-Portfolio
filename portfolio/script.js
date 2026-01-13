@@ -304,3 +304,44 @@ if (!localStorage.getItem("theme")) {
   }
 }
 // --------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const checkATSBtn = document.getElementById("checkATS");
+const resumeUpload = document.getElementById("resumeUpload");
+const atsResult = document.querySelector(".ats-result");
+const progressFill = document.getElementById("progressFill");
+const atsScoreText = document.getElementById("atsScore");
+
+checkATSBtn.addEventListener("click", () => {
+  if (!resumeUpload.files.length) {
+    alert("Please upload your resume first!");
+    return;
+  }
+
+  atsResult.style.display = "block";
+
+  // Fake ATS logic (demo)
+  const score = Math.floor(Math.random() * 31) + 65; // 65–95%
+
+  progressFill.style.width = score + "%";
+  atsScoreText.textContent = score + "%";
+});
