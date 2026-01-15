@@ -194,15 +194,13 @@ document.querySelector(".about-buttons a").addEventListener("click", () => {
 });
 
 // --- GOOGLE SHEETS CONNECTED CONTACT FORM ---
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxJa9C1UMgWJVloHL7JsxUzBkuJ_WY7g1lcaYHGTsiJpyuEa5LziIAzPF07aXQ79ZIK/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwExOEJ7Aqtrl0mg70g35wOrMq2UIhM_qCqCJFBCgwVurnu7a8ykoDy_8C98oU23fbE3w/exec';
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', e => {
   e.preventDefault();
   
-  // Find the button to show loading state
-  const submitBtn = contactForm.querySelector('button[type="submit"]');
-  const originalText = submitBtn.innerText;
+  const submitBtn = document.getElementById('submitBtn');
   submitBtn.disabled = true;
   submitBtn.innerText = "Sending...";
 
@@ -211,19 +209,18 @@ contactForm.addEventListener('submit', e => {
     body: new FormData(contactForm)
   })
   .then(response => {
-    alert("✅ Success! Your message has been sent to Harshit's Google Sheet.");
+    alert("✅ Success! Your message has been recorded.");
     submitBtn.disabled = false;
-    submitBtn.innerText = originalText;
+    submitBtn.innerText = "Send Message";
     contactForm.reset();
   })
   .catch(error => {
     console.error('Error!', error.message);
-    alert("❌ Error! Something went wrong. Please try again.");
+    alert("❌ Error! Make sure you ran 'initialSetup' in Apps Script.");
     submitBtn.disabled = false;
-    submitBtn.innerText = originalText;
+    submitBtn.innerText = "Send Message";
   });
-});
-// -------------------------------------------------------------------------->
+});// -------------------------------------------------------------------------->
 
 const filterButtons = document.querySelectorAll(".filter-buttons button");
 const projects = document.querySelectorAll(".project-card");
