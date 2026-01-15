@@ -194,7 +194,7 @@ document.querySelector(".about-buttons a").addEventListener("click", () => {
 });
 
 // --- GOOGLE SHEETS CONNECTED CONTACT FORM ---
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwExOEJ7Aqtrl0mg70g35wOrMq2UIhM_qCqCJFBCgwVurnu7a8ykoDy_8C98oU23fbE3w/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwGS2rTqjVuzA1mPL_GxrqzLgK6Sgx1johNpUC_ExYt8EVrsWpOv7WTHUrnlCOa0xgMZQ/exec';
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', e => {
